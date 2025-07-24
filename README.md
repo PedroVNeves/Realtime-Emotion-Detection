@@ -49,9 +49,9 @@ Para uma análise mais detalhada, o relatório de classificação e a matriz de 
 * **Pontos Fracos:** O modelo tem dificuldade significativa com **Medo** e **Tristeza**, apresentando F1-Scores de 0.00. Isso é primariamente devido ao **número extremamente baixo de amostras (support)** dessas emoções no conjunto de teste. A emoção **Raiva** também apresenta um Recall baixo (0.25), indicando que a maioria das instâncias de raiva não são detectadas corretamente, apesar de, quando preditas, serem geralmente corretas (Precision 1.00).
 
 ### Matriz de Confusão
-```markdown
+
 ![Matriz de Confusão](confusion_matrix.png)
-``` 
+ 
 
 ## Configuração do Ambiente
 
