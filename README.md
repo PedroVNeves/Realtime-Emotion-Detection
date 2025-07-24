@@ -22,6 +22,36 @@ O projeto também envolve tratamento e analise de dados para garantir a eficiên
 * **Scikit-learn:** Para métricas de avaliação do modelo (relatório de classificação, matriz de confusão).
 * **Matplotlib e Seaborn:** Para visualização de dados e gráficos.
 
+## Performance do Modelo
+
+O modelo de CNN foi treinado com o dataset CK+ Extended e avaliado no conjunto de teste. Ele alcançou uma **acurácia geral de 88%**, o que é um resultado promissor.
+
+Para uma análise mais detalhada, o relatório de classificação e a matriz de confusão revelam os seguintes insights:
+
+### Relatório de Classificação (Resumo do Desempenho por Emoção)
+
+| Emoção     | Precision | Recall | F1-Score | Support |
+| :--------- | :-------- | :----- | :------- | :------ |
+| Raiva      | 1.00      | 0.25   | 0.40     | 4       |
+| Desgosto   | 0.83      | 0.83   | 0.83     | 6       |
+| Medo       | 0.00      | 0.00   | 0.00     | 2       |
+| Felicidade | 0.88      | 1.00   | 0.93     | 7       |
+| Tristeza   | 0.00      | 0.00   | 0.00     | 3       |
+| Surpresa   | 1.00      | 0.88   | 0.93     | 8       |
+| Neutro     | 0.87      | 0.98   | 0.92     | 59      |
+
+* **Acurácia Geral:** 0.88
+* **Média Ponderada (weighted avg):** Precision 0.83, Recall 0.88, F1-Score 0.84
+
+**Observações:**
+
+* **Pontos Fortes:** O modelo demonstra excelente capacidade de identificar **Felicidade**, **Surpresa** e **Neutro**, com F1-Scores superiores a 0.90 para essas classes. O alto "support" para "Neutro" contribui significativamente para a acurácia geral.
+* **Pontos Fracos:** O modelo tem dificuldade significativa com **Medo** e **Tristeza**, apresentando F1-Scores de 0.00. Isso é primariamente devido ao **número extremamente baixo de amostras (support)** dessas emoções no conjunto de teste. A emoção **Raiva** também apresenta um Recall baixo (0.25), indicando que a maioria das instâncias de raiva não são detectadas corretamente, apesar de, quando preditas, serem geralmente corretas (Precision 1.00).
+
+### Matriz de Confusão
+
+![Matriz de Confusão](confusion_matrix.png)
+
 ## Configuração do Ambiente
 
 Siga estes passos para configurar o ambiente e executar o projeto:
@@ -35,3 +65,5 @@ Siga estes passos para configurar o ambiente e executar o projeto:
 ```bash
 git clone [https://github.com/SeuUsuario/EmotionNet-Cam.git](https://github.com/SeuUsuario/EmotionNet-Cam.git)
 cd EmotionNet-Cam
+
+
