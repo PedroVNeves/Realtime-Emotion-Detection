@@ -1,0 +1,23 @@
+import numpy as np
+import pandas as pd
+
+df= pd.read_csv('ckextended.csv')
+
+# Map emotion labels
+emotion_labels = {0: 'Raiva', 1: 'Desgosto', 2: 'Medo', 3: 'Felicidade', 4: 'Tristeza', 5: 'Surpresa', 6: 'Neutro'}
+df['emotion_label'] = df['emotion'].map(emotion_labels)
+
+# Process pixels column
+df['pixels_list'] = df['pixels'].apply(lambda x: np.array(x.split(' '), dtype='float32'))
+
+# Reshape and normalize images
+image_size = (48, 48) # CK+ dataset images are usually 48x48
+df['image_reshaped'] = df['pixels_list'].apply(lambda x: x.reshape(image_size))
+df['pixels_normalized'] = df['pixels_list'].apply(lambda x: x / 255.0)
+
+print("DataFrame after processing pixels and adding emotion labels:")
+print(df[['emotion', 'emotion_label', 'pixels', 'pixels_list', 'image_reshaped', 'Usage']].head())
+
+# Display info to confirm new column types
+print("\nDataFrame info after adding new columns:")
+print(df.info())
