@@ -1,8 +1,8 @@
-# EmotionNet-Cam: Sistema de Reconhecimento de Emoções Faciais em Tempo Real
+Realtime Emotion Detection
 
 ## Visão Geral do Projeto
 
-O **EmotionNet-Cam** é um projeto de aprendizado de máquina que utiliza visão computacional para detectar e classificar emoções faciais em tempo real através da câmera do computador. Desenvolvido em Python, ele emprega uma Rede Neural Convolucional (CNN) treinada em dados de expressões faciais para identificar emoções como Raiva, Desgosto, Medo, Felicidade, Tristeza, Surpresa e Neutro.
+O **Realtime Emotion Detection** é um projeto de aprendizado de máquina que utiliza visão computacional para detectar e classificar emoções faciais em tempo real através da câmera do computador. Desenvolvido em Python, ele emprega uma Rede Neural Convolucional (CNN) treinada em dados de expressões faciais para identificar emoções como Raiva, Desgosto, Medo, Felicidade, Tristeza, Surpresa e Neutro.
 
 ## Funcionalidades Principais
 
