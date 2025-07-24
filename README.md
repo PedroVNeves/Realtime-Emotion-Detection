@@ -1,8 +1,9 @@
-Realtime Emotion Detection
+# Realtime Emotion Detection
 
 ## Visão Geral do Projeto
 
 O **Realtime Emotion Detection** é um projeto de aprendizado de máquina que utiliza visão computacional para detectar e classificar emoções faciais em tempo real através da câmera do computador. Desenvolvido em Python, ele emprega uma Rede Neural Convolucional (CNN) treinada em dados de expressões faciais para identificar emoções como Raiva, Desgosto, Medo, Felicidade, Tristeza, Surpresa e Neutro.
+O projeto também envolve tratamento e analise de dados para garantir a eficiência do modelo.
 
 ## Funcionalidades Principais
 
